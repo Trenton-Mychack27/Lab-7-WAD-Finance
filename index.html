@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard</title>
+</head>
+<body>
+    <h1>Add income</h1>
+    <form id="incomeForm">
+        <label for="ISN">Income Source Name: </label>
+        <input type="text" id="ISN" name="ISN" required><br>
+
+        <label for="Amount">Amount: </label>
+        <input type="text" id="Amount" name="Amount" required><br>
+
+        <label for="Frequency">Frequency: </label>
+        <select id="Frequency" name="Frequency" required>
+            <option value="">Select</option>
+            <option value="one-time">One-time</option>
+            <option value="monthly">Monthly</option>
+            <option value="bi-weekly">Bi-weekly</option>
+            <option value="yearly">Yearly</option>
+        </select><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
