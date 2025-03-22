@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        alert("Form submitted successfully!");
+        window.location.href = "add-expense.html";
         
     });
 });
