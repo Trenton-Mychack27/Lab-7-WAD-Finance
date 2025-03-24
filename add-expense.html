@@ -21,7 +21,7 @@
 
       <div class="mb-3">
         <label for="AmountExp" class="form-label">Expense Amount:</label>
-        <input type="text" class="form-control" id="AmountExp" name="AmountExp" required>
+        <input type="text" class="form-control" id="AmountExp" name="AmountExp" required min="0.01" max="50000">
       </div>
       
       <div class="mb-3">
@@ -47,7 +47,7 @@
 
       <div class="mb-3">
         <label for="Rationale" class="form-label">Rationale:</label>
-        <textarea class="form-control" id="Rationale" name="Rationale" required></textarea>
+        <textarea class="form-control" id="Rationale" name="Rationale" required maxlength="100"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
