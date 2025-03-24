@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             amountInput.value = "";
             alert("Amount must be a number greater than 0.");
-        }
-    });
+                }
+        });
 
     form.addEventListener("submit", function (e) {
         e.preventDefault(); 
@@ -34,17 +34,5 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        window.location.href = "add-expense.html";
-        
     });
-});
-
-const expenseForm = document.getElementById("expenseForm");
-const expenseAmount = document.getElementById("AmountExp");
-
-expenseAmount.addEventListener("blur", () => {
-    if(input.value.trim() < 5) {
-        alert("Please enter an amount greater than 5.");
-        return;
-    }
 });
