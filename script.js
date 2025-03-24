@@ -38,3 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
         
     });
 });
+
+const expenseForm = document.getElementById("expenseForm");
+const expenseAmount = document.getElementById("AmountExp");
+
+expenseAmount.addEventListener("blur", () => {
+    if(input.value.trim() < 5) {
+        alert("Please enter an amount greater than 5.");
+        return;
+    }
+});

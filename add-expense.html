@@ -20,10 +20,35 @@
       </div>
 
       <div class="mb-3">
-        <label for="Amount" class="form-label">Expense Amount:</label>
-        <input type="text" class="form-control" id="Amount" name="Amount" required>
+        <label for="AmountExp" class="form-label">Expense Amount:</label>
+        <input type="text" class="form-control" id="AmountExp" name="AmountExp" required>
+      </div>
+      
+      <div class="mb-3">
+        <label for="Category" class="form-label">Category:</label>
+        <select class="form-select" id="Category" name="Category" required>
+            <option value="">Select</option>
+            <option value="groceries">Groceries</option>
+            <option value="business">Business</option>
+            <option value="restaurants">Restaurants</option>
+            <option value="fun">Fun</option>
+        </select>
       </div>
 
+      <div class="mb-3">
+        <label for="Payment" class="form-label">Payment Method:</label>
+        <select class="form-select" id="Payment" name="Payment" required>
+            <option value="">Select</option>
+            <option value="cash">Cash</option>
+            <option value="credit">Credit Card</option>
+            <option value="debit">Debit Card</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="Rationale" class="form-label">Rationale:</label>
+        <textarea class="form-control" id="Rationale" name="Rationale" required></textarea>
+      </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </main>
