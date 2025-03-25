@@ -12,13 +12,24 @@
     <form id="incomeForm">
       <div class="mb-3">
         <label for="ISN" class="form-label">Income Source Name:</label>
-        <input type="text" class="form-control" id="ISN" name="ISN" required>
+        <input type="text" class="form-control" id="ISN" name="ISN" required minlength="3">
       </div>
 
       <div class="mb-3">
         <label for="Amount" class="form-label">Amount:</label>
         <input type="text" class="form-control" id="Amount" name="Amount" required>
       </div>
+      <script>
+        document.getElementById('Amount').addEventListener('blur', function() {
+          let amountValue = parseFloat(this.value);
+          if (!isNaN(amountValue) && amountValue > 0) {
+            this.value = amountValue.toFixed(2);
+          } else {
+            this.value = '';
+            alert('Please enter a valid amount greater than 0');
+          }
+        });
+      </script>
 
       <div class="mb-3">
         <label for="Frequency" class="form-label">Frequency:</label>
@@ -38,3 +49,9 @@
   <script src="script.js"></script>
 </body>
 </html>
+<script>
+  document.getElementById('incomeForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    window.location.href = 'add-expense.html';
+  });
+</script>

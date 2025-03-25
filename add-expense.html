@@ -55,3 +55,9 @@
 
   <script src="script.js"></script>
 </html>
+<script>
+  document.getElementById('expenseForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    window.location.href = 'add-check-payment.html';
+  });
+</script>

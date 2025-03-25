@@ -8,7 +8,7 @@
 </head>
 <body>
     <main class="container mt-4">
-        <h1 class="mb-3">Add Expense</h1>
+        <h1 class="mb-3">Check Payment</h1>
         <form id="expenseForm">
           <div class="mb-3">
             <label for="check" class="form-label">Name of Check:</label>
@@ -16,7 +16,7 @@
           </div>
     
           <div class="mb-3">
-            expense date: <input type="date" name="date" required min="2025-03-24">
+            date: <input type="date" name="date" required min="2025-03-24">
           </div>
     
           <div class="mb-3">
@@ -41,3 +41,9 @@
     
 </body>
 </html>
+<script>
+  document.getElementById('expenseForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Check Payment Added Successfully!');
+  });
+</script>
