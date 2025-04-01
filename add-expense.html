@@ -16,25 +16,35 @@
       </div>
 
       <div class="mb-3">
-        expense date: <input type="date" name="date" required max="2025-03-24">
+        Expense Date: <input type="date" name="date" required max="2025-03-24">
       </div>
 
       <div class="mb-3">
         <label for="AmountExp" class="form-label">Expense Amount:</label>
-        <input type="text" class="form-control" id="AmountExp" name="AmountExp" required min="0.01" max="50000">
+        <input type="number" class="form-control" id="AmountExp" name="AmountExp" required min="0.01" max="50000" step="0.01">
       </div>
       
+      
       <div class="mb-3">
-        <label for="Category" class="form-label">Category:</label>
-        <select class="form-select" id="Category" name="Category" required>
-            <option value="">Select</option>
-            <option value="groceries">Groceries</option>
-            <option value="business">Business</option>
-            <option value="restaurants">Restaurants</option>
-            <option value="fun">Fun</option>
-        </select>
+        <label class="form-label">Category:</label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Category" id="groceries" value="groceries" required>
+          <label class="form-check-label" for="groceries">Groceries</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Category" id="business" value="business">
+          <label class="form-check-label" for="business">Business</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Category" id="restaurants" value="restaurants">
+          <label class="form-check-label" for="restaurants">Restaurants</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Category" id="fun" value="fun">
+          <label class="form-check-label" for="fun">Fun</label>
+        </div>
       </div>
-
+      
       <div class="mb-3">
         <label for="Payment" class="form-label">Payment Method:</label>
         <select class="form-select" id="Payment" name="Payment" required>
@@ -47,7 +57,7 @@
 
       <div class="mb-3">
         <label for="Rationale" class="form-label">Rationale:</label>
-        <textarea class="form-control" id="Rationale" name="Rationale" required maxlength="100"></textarea>
+        <textarea class="form-control" id="Rationale" name="Rationale" maxlength="100"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

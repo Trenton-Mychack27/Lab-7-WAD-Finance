@@ -16,12 +16,12 @@
           </div>
     
           <div class="mb-3">
-            date: <input type="date" name="date" required min="2025-03-24">
+            Payment Date: <input type="date" name="date" required min="2025-03-24">
           </div>
     
           <div class="mb-3">
             <label for="CheckAmt" class="form-label">Check Amount:</label>
-            <input type="text" class="form-control" id="CheckAmt" name="CheckAmt" required min="0.01">
+            <input type="number" class="form-control" id="CheckAmt" name="CheckAmt" required min="0.01" step="0.01">
           </div>
           
           <div class="mb-3">
@@ -31,8 +31,7 @@
     
             <div class="mb-3">
                 <label for="AcctNum" class="form-label">Account Number:</label>
-                <input type="text" class="form-control" id="AcctNum" name="AcctNum" required minlength = 10 maxlength="10">
-    
+                <input type="text" class="form-control" id="AcctNum" name="AcctNum" required pattern="\d{10}" title="Enter exactly 10 digits">
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </main>
