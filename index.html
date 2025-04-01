@@ -45,13 +45,22 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
 <script>
   document.getElementById('incomeForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    window.location.href = 'add-expense.html';
+    makeRequest();
   });
+
+  function makeRequest() {
+    let url = "https://webhook-test.com/6140f2d63984ad79757df3e381120805";
+    let params = new FormData(document.getElementById("incomeForm"));
+    fetch(url, { method : "POST", body : params})
+      .then(statusCheck)
+      .then(response => response.json())
+      .then(handleResponse)
+      .catch(handleError);
+}
+
 </script>

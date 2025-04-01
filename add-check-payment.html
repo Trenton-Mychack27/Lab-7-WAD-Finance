@@ -9,7 +9,7 @@
 <body>
     <main class="container mt-4">
         <h1 class="mb-3">Check Payment</h1>
-        <form id="expenseForm">
+        <form id="checkForm">
           <div class="mb-3">
             <label for="check" class="form-label">Name of Check:</label>
             <input type="text" class="form-control" id="check" name="check" required minlength = 5>
@@ -35,14 +35,23 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </main>
-    
-      <script src="script.js"></script>
-    
+  
 </body>
 </html>
 <script>
-  document.getElementById('expenseForm').addEventListener('submit', function(event) {
+  document.getElementById('checkForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    alert('Check Payment Added Successfully!');
+    makeRequest();
   });
+
+  function makeRequest() {
+    let url = "https://webhook-test.com/6140f2d63984ad79757df3e381120805";
+    let params = new FormData(document.getElementById("checkForm"));
+    fetch(url, { method : "POST", body : params})
+      .then(statusCheck)
+      .then(response => response.json())
+      .then(handleResponse)
+      .catch(handleError);
+}
+
 </script>
